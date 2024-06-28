@@ -99,6 +99,14 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  .main-container {
+    margin: 15vh 15vw;
+  }
+  .form {
+    padding: 3vh 3vw;
+    margin-bottom: 20px;
+    background-color: rgb(238, 241, 246);
+  }
   .input-radio,
   .input-checkbox {
     display: inline-block;
@@ -126,5 +134,9 @@ button:hover {
   textarea,
   button {
     width: 95%;
+  }
+  label{
+    font-weight: 500;
+    font-size: 12px;
   }
 }
