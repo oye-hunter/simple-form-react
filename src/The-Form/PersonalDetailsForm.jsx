@@ -5,6 +5,37 @@ const PersonalDetailsForm = ({ setSteps, steps }) => {
   useEffect(() => {
     const element1 = document.getElementById("check1");
     element1.classList.add("check-active");
+
+
+    const element2 = document.getElementById("check4");
+    if(element2.classList.contains("check-active")){
+      element2.classList.remove("check-active");
+    }
+
+    const element3 = document.getElementsByClassName("steps-nav-line");
+    if(element3[2].classList.contains("steps-nav-line-active")){
+    element3[2].classList.remove("steps-nav-line-active");
+    }
+
+    const element4 = document.getElementById("check3");
+    if(element4.classList.contains("check-active")){
+      element4.classList.remove("check-active");
+    }
+
+    const element7 = document.getElementsByClassName("steps-nav-line");
+    if(element7[1].classList.contains("steps-nav-line-active")){
+    element7[1].classList.remove("steps-nav-line-active");
+    }
+
+    const element5 = document.getElementById("check2");
+    if(element5.classList.contains("check-active")){
+      element5.classList.remove("check-active");
+    }
+
+    const element6 = document.getElementsByClassName("steps-nav-line");
+    if(element6[0].classList.contains("steps-nav-line-active")){
+    element6[0].classList.remove("steps-nav-line-active");
+    }
   }, []);
 
   const handleNext = (e) => {

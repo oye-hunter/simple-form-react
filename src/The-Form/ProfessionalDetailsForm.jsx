@@ -11,6 +11,9 @@ const ProfessionalDetailsForm = ({ setSteps, steps }) => {
   const handleNext = () => {
     setSteps(steps + 1);
   };
+  const handleBack = () => {
+    setSteps(steps - 1);
+  };
 
   return (
     <div className="main-container">
@@ -62,6 +65,7 @@ const ProfessionalDetailsForm = ({ setSteps, steps }) => {
           </div>
         </div>
         <button type="">Submit</button>
+        <button type="submit" onClick={handleBack}>Back</button>
       </form>
     </div>
   );

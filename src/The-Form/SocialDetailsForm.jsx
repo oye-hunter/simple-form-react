@@ -6,10 +6,24 @@ const SocialDetailsForm = ({ setSteps, steps }) => {
     check1Element.classList.add("check-active");
     const element2 = document.getElementsByClassName("steps-nav-line");
     element2[1].classList.add("steps-nav-line-active");
+
+
+    const element5 = document.getElementById("check4");
+    if(element5.classList.contains("check-active")){
+      element5.classList.remove("check-active");
+    }
+
+    const element6 = document.getElementsByClassName("steps-nav-line");
+    if(element6[2].classList.contains("steps-nav-line-active")){
+    element6[2].classList.remove("steps-nav-line-active");
+    }
   }, []);
 
   const handleNext = () => {
     setSteps(steps + 1);
+  };
+  const handleBack = () => {
+    setSteps(steps - 1);
   };
   return (
     <div className="main-container">
@@ -33,6 +47,7 @@ const SocialDetailsForm = ({ setSteps, steps }) => {
           <br />
         </div>
         <button type="submit">Next</button>
+        <button type="submit" onClick={handleBack}>Back</button>
       </form>
     </div>
   );
